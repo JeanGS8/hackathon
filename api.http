@@ -1,0 +1,107 @@
+// CLASSES
+
+###
+
+GET http://localhost:4000/class/all
+
+###
+
+POST http://localhost:4000/class/register HTTP/1.1
+content-type: application/json
+
+{
+  "description": "231232",
+  "isActive": false,
+  "group": []
+}
+
+###
+
+PUT http://localhost:4000/class/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "description": "231232",
+  "isActive": false
+}
+###
+
+Delete http://localhost:4000/class/6
+
+###
+
+// GRUPOS
+
+###
+
+GET http://localhost:4000/group/all
+
+###
+
+POST http://localhost:4000/group/register HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "groupNumber": "Grupo 1",
+  "moreInfos": "Grupo 1.1",
+  "classes": {
+    "id": 2
+  }
+}
+
+###
+
+PUT http://localhost:4000/group/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "groupNumber": "Grupo 2",
+  "moreInfos": "Grupo 1.1"
+}
+###
+
+Delete http://localhost:4000/group/2
+
+###
+
+// PROJETOS
+
+###
+
+GET http://localhost:4000/project/all
+
+###
+
+POST http://localhost:4000/project/register HTTP/1.1
+content-type: application/json
+
+{
+  "projectName": "Projeto 1",
+  "projectLink": "Link projeto 1",
+  "projectLogo": "Logo projeto 1",
+  "projectPit": "Pit projeto 1",
+  "group": {
+    "id": 1
+  }
+}
+
+###
+
+PUT http://localhost:4000/project/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "projectName": "Projeto 1",
+  "projectLink": "Link projeto 1",
+  "projectLogo": "Logo projeto 1",
+  "projectPit": "Pit projeto 1"
+}
+###
+
+Delete http://localhost:4000/project/2
+
+###
